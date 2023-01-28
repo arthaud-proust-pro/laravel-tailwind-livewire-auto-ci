@@ -9,6 +9,12 @@ export HOME
 # activate maintenance mode
 php artisan down
 
+# allow rebasing by default, because release/staging will diverge at every build (because of force push)
+git config pull.rebase true
+
+# checkout to build branch
+git checkout -b release/staging
+
 # update source code
 git pull
 

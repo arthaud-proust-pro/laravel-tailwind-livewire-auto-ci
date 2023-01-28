@@ -11,7 +11,7 @@ class GithubWebHook
     {
         $githubPayload = $request->getContent();
         $githubHash = $request->header('X-Hub-Signature');
-        $localToken = config('app.deploy_secret');
+        $localToken = config('webhook.secret');
         $localHash = 'sha1=' . hash_hmac('sha1', $githubPayload, $localToken, false);
 
         if (!hash_equals($githubHash, $localHash)) {

@@ -13,9 +13,9 @@
 ## Setup & use
 ### Local setup
 ```shell
-cp .env.example .env
+cp .env.sail.example .env
 ```
-Then setup your env, and do following commands :
+Then setup your local env, and do following commands :
 ```shell
 composer install
 ```
